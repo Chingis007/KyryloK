@@ -222,14 +222,14 @@ function App() {
               <FontAwesomeIcon
                 icon={faGithub}
                 style={{ color: "#FFFFFF" }}
-                size="2xl"
+                size="xl"
               />
             </a>
             <a href="https://www.linkedin.com/in/kyrylo-karaulnyi-589950278/">
               <FontAwesomeIcon
                 icon={faLinkedin}
                 style={{ color: "#FFFFFF" }}
-                size="2xl"
+                size="xl"
               />
             </a>
           </div>
@@ -249,30 +249,32 @@ function App() {
                 id="linkDiv"
                 onClick={() => {
                   setCurrentLink("About")
-                  console.log("1")
+                  window.scrollTo(0, 0)
                 }}
               >
-                <div
-                  id="line"
-                  style={
-                    currentLink === "About"
-                      ? {
-                          backgroundColor: "white",
-                          width: "100px",
-                          color: "white",
-                        }
-                      : { display: "flex" }
-                  }
-                ></div>
-                <p
-                  style={
-                    currentLink === "About"
-                      ? { color: "white" }
-                      : { display: "flex" }
-                  }
-                >
-                  About
-                </p>
+                <a href="#rightAbout">
+                  <div
+                    id="line"
+                    style={
+                      currentLink === "About"
+                        ? {
+                            backgroundColor: "white",
+                            width: "80px",
+                            color: "white",
+                          }
+                        : { display: "flex" }
+                    }
+                  ></div>
+                  <p
+                    style={
+                      currentLink === "About"
+                        ? { color: "white" }
+                        : { display: "flex" }
+                    }
+                  >
+                    ABOUT
+                  </p>
+                </a>
               </div>
               <div
                 id="linkDiv"
@@ -280,37 +282,53 @@ function App() {
                   setCurrentLink("Projects")
                 }}
               >
-                <div
-                  id="line"
-                  style={
-                    currentLink === "Projects"
-                      ? { borderColor: "white", width: "100px", color: "white" }
-                      : { display: "flex" }
-                  }
-                ></div>
-                <p
-                  style={
-                    currentLink === "Projects"
-                      ? { color: "white" }
-                      : { display: "flex" }
-                  }
-                >
-                  Projects
-                </p>
+                <a href="#rightProjects">
+                  <div
+                    id="line"
+                    style={
+                      currentLink === "Projects"
+                        ? {
+                            borderColor: "white",
+                            width: "80px",
+                            color: "white",
+                          }
+                        : { display: "flex" }
+                    }
+                  ></div>
+                  <p
+                    style={
+                      currentLink === "Projects"
+                        ? { color: "white" }
+                        : { display: "flex" }
+                    }
+                  >
+                    PROJECTS
+                  </p>
+                </a>
               </div>
             </div>
           </div>
           <div id="leftBottom">
             <a href="https://github.com/Chingis007">
-              <img src="./github-mark.svg" alt="" />
+              <FontAwesomeIcon
+                icon={faGithub}
+                style={{ color: "#FFFFFF" }}
+                size="xl"
+              />
             </a>
             <a href="https://www.linkedin.com/in/kyrylo-karaulnyi-589950278/">
-              <img src="./linkedin.svg" alt="" />
+              <FontAwesomeIcon
+                icon={faLinkedin}
+                style={{ color: "#FFFFFF" }}
+                size="xl"
+              />
             </a>
           </div>
         </div>
+
         <div id="right">
           <div id="rightAbout">
+            <div id="title">ABOUT</div>
             <p>
               Back in 2012, I decided to try my hand at creating custom Tumblr
               themes and tumbled head first into the rabbit hole of coding and
@@ -334,6 +352,7 @@ function App() {
           </div>
           {allJobs.length ? (
             <div id="rightJobs">
+              <div id="title">EXPERIENCE</div>
               {allJobs.map((oneJob) => {
                 return (
                   <div
@@ -382,6 +401,7 @@ function App() {
           ) : undefined}
           {allProjects.length ? (
             <div id="rightProjects">
+              <div id="title">PROJECTS</div>
               {allProjects.map((oneProject) => {
                 return (
                   <div
