@@ -60,6 +60,7 @@ html {
   color: rgb(226, 232, 240);
   font-weight: bold;
   letter-spacing: -0.025em;
+  cursor: pointer;
 }
 #main #left #leftTop #header h2 {
   all: unset;
@@ -78,6 +79,7 @@ html {
   color: rgb(148, 163, 184);
 }
 #main #left #leftTop #mapLinks {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -263,6 +265,7 @@ html {
 }
 #main #right #rightJobs .unoJob {
   z-index: 1;
+  cursor: pointer;
   transition: all 0.2s;
   display: flex;
   flex-direction: row;
@@ -312,6 +315,7 @@ html {
   width: 100%;
   color: rgb(148, 163, 184);
   font-size: 14px;
+  line-height: 21px;
 }
 #main #right #rightJobs .unoJob #otherInfo #skills {
   width: 100%;
@@ -352,6 +356,7 @@ html {
   width: 100%;
 }
 #main #right #rightProjects .unoProject {
+  cursor: pointer;
   z-index: 1;
   transition: all 0.2s;
   display: flex;
@@ -413,6 +418,7 @@ html {
   width: 100%;
   color: rgb(148, 163, 184);
   font-size: 14px;
+  line-height: 21px;
 }
 #main #right #rightProjects .unoProject #otherInfo #skills {
   width: 100%;
@@ -437,6 +443,7 @@ html {
 }
 #main #right #rightProjects .unoProject:hover {
   background-color: rgba(90, 110, 120, 0.1);
+  box-shadow: 0 0 5px rgb(0, 0, 0);
 }
 #main #right #rightProjects .unoProject:hover #imgDiv img {
   border-color: rgba(226, 232, 240, 0.5);

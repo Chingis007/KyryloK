@@ -20,7 +20,6 @@ export type Projs = {
   skills: string[]
 }[]
 function App() {
-  let myRef: any = useRef<HTMLDivElement>(null)
   const [currentLink, setCurrentLink] = useState("About")
   const [allJobs, setAllJobs] = useState<Jobs>([
     // {
@@ -55,7 +54,14 @@ function App() {
       img: "./messanger.png",
       h1: "Messanger App",
       p: "I have successfully developed a feature-rich messenger application, highlighting my skills in modern web development. The front-end is designed using React and TypeScript, offering a responsive and intuitive user interface. The back-end is built with a Node.js application, leveraging MongoDB for real-time data storage and retrieval.The entire application is deployed on cloud platforms such as Render and Vercel, ensuring optimal performance and scalability. This project showcases my ability to create seamless, real-time communication solutions, integrating front-end and back-end technologies, and efficiently deploying applications in a cloud environment.",
-      skills: ["JavaScript", "TypeScript"],
+      skills: [
+        "JavaScript",
+        "TypeScript",
+        "TypeScript",
+        "TypeScript",
+        "TypeScript",
+        "TypeScript",
+      ],
     },
     {
       classname: "unoProject",
@@ -63,7 +69,28 @@ function App() {
       img: "./commerce.png",
       h1: "E-Commerce Clothing Website",
       p: "I have developed a dynamic and fully-functional e-commerce clothing website that showcases my expertise in full-stack web development. The front-end of the website is crafted using React and TypeScript, ensuring a seamless and interactive user experience. On the back-end, I utilized a Dockerized Node.js application with MongoDB for efficient data management and scalability.The entire application is deployed and running on cloud platforms, including AWS, Render, and Vercel, ensuring high availability and performance. This project demonstrates my proficiency in modern web technologies, cloud deployment, and containerization, delivering a robust and user-friendly online shopping experience.",
-      skills: ["JavaScript", "TypeScript"],
+      skills: [
+        "JavaScript",
+        "TypeScript",
+        "TypeScript",
+        "TypeScript",
+        "TypeScript",
+        "React",
+        "React",
+        "React",
+        "React",
+        "React",
+        "TypeScript",
+        "TypeScript",
+        "TypeScript",
+        "TypeScript",
+        "TypeScript",
+        "TypeScript",
+        "TypeScript",
+        "TypeScript",
+        "TypeScript",
+        "TypeScript",
+      ],
     },
     {
       classname: "unoProject",
@@ -106,7 +133,6 @@ function App() {
     <>
       <div
         id="main"
-        ref={myRef}
         // onMouseMove={(event) => {
         //   let target = event.target as HTMLDivElement
         //   let rect = target.getBoundingClientRect()
@@ -396,7 +422,7 @@ function App() {
                       <div id="skills">
                         {oneProject.skills
                           ? oneProject.skills.map((skill) => {
-                              return <div id="skill">skill</div>
+                              return <div id="skill">{skill}</div>
                             })
                           : undefined}
                       </div>
