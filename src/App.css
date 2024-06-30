@@ -252,6 +252,17 @@ html {
   margin-bottom: 25px;
   letter-spacing: 0.1em;
 }
+#main #right #rightAbout #link {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: white;
+}
+#main #right #rightAbout #link a {
+  all: unset;
+  cursor: pointer;
+}
 #main #right #rightAbout p {
   margin: 0;
   width: 100%;
@@ -376,6 +387,17 @@ html {
   font-weight: bold;
   margin-bottom: 25px;
   letter-spacing: 0.1em;
+}
+#main #right #rightProjects #link {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: white;
+}
+#main #right #rightProjects #link a {
+  all: unset;
+  cursor: pointer;
 }
 #main #right #rightProjects .unoProject {
   display: grid;
@@ -544,9 +566,9 @@ html {
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
-    min-width: 392px;
-    max-width: 528px;
     min-height: 382px;
+    width: -moz-fit-content;
+    width: fit-content;
     height: calc(100vh - 182px);
     padding: 96px 0;
     opacity: 1;
@@ -877,8 +899,8 @@ html {
     scroll-margin-top: 96px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: start;
     gap: 15px;
     height: -moz-fit-content;
     height: fit-content;

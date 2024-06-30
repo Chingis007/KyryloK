@@ -286,6 +286,15 @@ html {
         margin-bottom: 25px;
         letter-spacing: 0.1em;
       }
+      #link {
+        width: fit-content;
+        height: fit-content;
+        color: white;
+        a {
+          all: unset;
+          cursor: pointer;
+        }
+      }
       p {
         margin: 0;
         width: 100%;
@@ -409,6 +418,15 @@ html {
         font-weight: bold;
         margin-bottom: 25px;
         letter-spacing: 0.1em;
+      }
+      #link {
+        width: fit-content;
+        height: fit-content;
+        color: white;
+        a {
+          all: unset;
+          cursor: pointer;
+        }
       }
       .unoProject {
         display: grid;
@@ -632,9 +650,10 @@ html {
       flex-direction: column;
       justify-content: space-between;
       align-items: start;
-      min-width: 392px;
-      max-width: 528px;
+      // min-width: 392px;
+      // max-width: 528px;
       min-height: 382px;
+      width: fit-content;
       height: calc(100vh - 182px);
       padding: 96px 0;
       opacity: 1;
@@ -1000,14 +1019,15 @@ html {
         scroll-margin-top: 96px;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        align-items: start;
+        justify-content: start;
         gap: 15px;
         height: fit-content;
         width: 100%;
         #title {
           display: none;
         }
+
         .unoProject {
           display: grid;
           grid-template-columns: repeat(7, 1fr);

@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react"
 import "./App.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
-
 export type Jobs = {
   classname: string
   index: number
@@ -17,6 +16,7 @@ export type Projs = {
   img: string
   h1: string
   p: string
+  link: string
   skills: string[]
 }[]
 function App() {
@@ -54,6 +54,7 @@ function App() {
       img: "./messanger.png",
       h1: "Messanger App",
       p: "I have successfully developed a feature-rich messenger application, highlighting my skills in modern web development. The front-end is designed using React and TypeScript, offering a responsive and intuitive user interface. The back-end is built with a Node.js application, leveraging MongoDB for real-time data storage and retrieval.The entire application is deployed on cloud platforms such as Render and Vercel, ensuring optimal performance and scalability. This project showcases my ability to create seamless, real-time communication solutions, integrating front-end and back-end technologies, and efficiently deploying applications in a cloud environment.",
+      link: "https://silentalk.vercel.app/",
       skills: [
         "JavaScript",
         "TypeScript",
@@ -69,6 +70,7 @@ function App() {
       img: "./commerce.png",
       h1: "E-Commerce Clothing Website",
       p: "I have developed a dynamic and fully-functional e-commerce clothing website that showcases my expertise in full-stack web development. The front-end of the website is crafted using React and TypeScript, ensuring a seamless and interactive user experience. On the back-end, I utilized a Dockerized Node.js application with MongoDB for efficient data management and scalability.The entire application is deployed and running on cloud platforms, including AWS, Render, and Vercel, ensuring high availability and performance. This project demonstrates my proficiency in modern web technologies, cloud deployment, and containerization, delivering a robust and user-friendly online shopping experience.",
+      link: "https://verona-front.vercel.app/",
       skills: [
         "JavaScript",
         "TypeScript",
@@ -91,22 +93,6 @@ function App() {
         "TypeScript",
         "TypeScript",
       ],
-    },
-    {
-      classname: "unoProject",
-      index: 1,
-      img: "./commerce.png",
-      h1: "E-Commerce Clothing Website",
-      p: "I have developed a dynamic and fully-functional e-commerce clothing website that showcases my expertise in full-stack web development. The front-end of the website is crafted using React and TypeScript, ensuring a seamless and interactive user experience. On the back-end, I utilized a Dockerized Node.js application with MongoDB for efficient data management and scalability.The entire application is deployed and running on cloud platforms, including AWS, Render, and Vercel, ensuring high availability and performance. This project demonstrates my proficiency in modern web technologies, cloud deployment, and containerization, delivering a robust and user-friendly online shopping experience.",
-      skills: ["JavaScript", "TypeScript"],
-    },
-    {
-      classname: "unoProject",
-      index: 1,
-      img: "./commerce.png",
-      h1: "E-Commerce Clothing Website",
-      p: "I have developed a dynamic and fully-functional e-commerce clothing website that showcases my expertise in full-stack web development. The front-end of the website is crafted using React and TypeScript, ensuring a seamless and interactive user experience. On the back-end, I utilized a Dockerized Node.js application with MongoDB for efficient data management and scalability.The entire application is deployed and running on cloud platforms, including AWS, Render, and Vercel, ensuring high availability and performance. This project demonstrates my proficiency in modern web technologies, cloud deployment, and containerization, delivering a robust and user-friendly online shopping experience.",
-      skills: ["JavaScript", "TypeScript"],
     },
   ])
   let listenerExist = false
@@ -406,6 +392,7 @@ function App() {
                 return (
                   <div
                     className={oneProject.classname}
+                    onClick={() => window.open(oneProject.link, "_blank")}
                     // onMouseEnter={(event) => {
                     //   console.log("1")
                     //   let oldAllJobs = structuredClone(allJobs)
@@ -450,6 +437,11 @@ function App() {
                   </div>
                 )
               })}
+              <div id="link">
+                <a href="./Resume.pdf" download="">
+                  View Full Resume
+                </a>
+              </div>
             </div>
           ) : undefined}
         </div>
