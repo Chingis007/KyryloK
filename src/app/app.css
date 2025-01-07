@@ -1,0 +1,1068 @@
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter-VariableFont_slnt,wght.ttf");
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                              'embedded-opentype', and 'svg' */
+}
+/* For mobile phones: */
+#main {
+  font-family: Inter;
+  font-feature-settings: "ss03", "cv02", "cv11";
+  font-variation-settings: normal;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  background-color: rgb(15, 23, 42);
+  /* width: calc(100% - 48px); */
+  width: 100%;
+  height: 100%;
+  padding: 48px 24px;
+  overflow-y: hidden;
+  z-index: 1;
+}
+#main #left {
+  all: unset;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0 0;
+}
+#main #left #leftTop {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+#main #left #leftTop #header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+#main #left #leftTop #header h1 {
+  all: unset;
+  width: 100%;
+  white-space: wrap;
+  font-size: 36px;
+  color: rgb(226, 232, 240);
+  font-weight: bold;
+  letter-spacing: -0.025em;
+  cursor: pointer;
+}
+#main #left #leftTop #header h2 {
+  all: unset;
+  width: 100%;
+  white-space: wrap;
+  margin-top: 10px;
+  font-weight: bold;
+  letter-spacing: -0.025em;
+  font-size: 20px;
+  color: rgb(226, 232, 240);
+}
+#main #left #leftTop #header h3 {
+  all: unset;
+  white-space: wrap;
+  margin-top: 15px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgb(148, 163, 184);
+}
+#main #left #leftTop #mapLinks {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 100%;
+}
+#main #left #leftTop #mapLinks #linkDiv a {
+  all: unset;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#main #left #leftTop #mapLinks #linkDiv a #line {
+  transition: all 0.3s;
+  background-color: rgb(148, 163, 184);
+  height: 1px;
+  width: 40px;
+}
+#main #left #leftTop #mapLinks #linkDiv a p {
+  transition: all 0.3s;
+  font-weight: bold;
+  color: rgb(148, 163, 184);
+  letter-spacing: 1.2px;
+  font-size: 12px;
+}
+#main #left #leftTop #mapLinks #linkDiv:hover #line {
+  background-color: white;
+  width: 80px;
+}
+#main #left #leftTop #mapLinks #linkDiv:hover p {
+  color: white;
+}
+#main #left #leftBottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  margin-top: 32px;
+}
+#main #left #leftBottom a {
+  transition: all 0.3s;
+  opacity: 0.5;
+}
+#main #left #leftBottom a:hover {
+  opacity: 1;
+}
+#main #left2 {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  min-width: 392px;
+  max-width: 528px;
+  min-height: 382px;
+  padding: 96px 0;
+  opacity: 0;
+  pointer-events: none;
+}
+#main #left2 #leftTop {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+#main #left2 #leftTop #header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+#main #left2 #leftTop #header h1 {
+  all: unset;
+  font-size: 48px;
+  color: rgb(226, 232, 240);
+}
+#main #left2 #leftTop #header h2 {
+  all: unset;
+  margin-top: 10px;
+  font-size: 20px;
+  color: rgb(226, 232, 240);
+}
+#main #left2 #leftTop #header h3 {
+  all: unset;
+  margin-top: 15px;
+  font-size: 16px;
+  color: rgb(148, 163, 184);
+}
+#main #left2 #leftTop #mapLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 100%;
+}
+#main #left2 #leftTop #mapLinks #linkDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#main #left2 #leftTop #mapLinks #linkDiv #line {
+  transition: all 0.3s;
+  background-color: gray;
+  height: 1px;
+  width: 50px;
+}
+#main #left2 #leftTop #mapLinks #linkDiv p {
+  transition: all 0.3s;
+  font-weight: bold;
+  color: gray;
+}
+#main #left2 #leftTop #mapLinks #linkDiv:hover #line {
+  background-color: white;
+  width: 100px;
+}
+#main #left2 #leftTop #mapLinks #linkDiv:hover p {
+  color: white;
+}
+#main #left2 #leftBottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 32px;
+}
+#main #left2 #leftBottom a img {
+  width: 30px;
+  height: 30px;
+}
+#main #right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 100px;
+  height: 100%;
+  color: rgb(148, 163, 184);
+  padding: 96px 0;
+}
+#main #right #rightAbout {
+  scroll-margin-top: 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 10px;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  padding: 0px 0;
+}
+#main #right #rightAbout #title {
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 25px;
+  letter-spacing: 0.1em;
+}
+#main #right #rightAbout #link {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: white;
+}
+#main #right #rightAbout #link a {
+  all: unset;
+  cursor: pointer;
+}
+#main #right #rightAbout p {
+  margin: 0;
+  width: 100%;
+  word-wrap: break-word;
+  font-weight: 500;
+  line-height: 26px;
+  font-size: 16px;
+}
+#main #right #rightJobs {
+  scroll-margin-top: 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+}
+#main #right #rightJobs #title {
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 25px;
+  letter-spacing: 0.1em;
+}
+#main #right #rightJobs .unoJob {
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: calc(100% - 30px);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+  padding: 10px 15px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+#main #right #rightJobs .unoJob #time {
+  min-width: 86px;
+  max-width: 120px;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+  color: gray;
+  height: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#main #right #rightJobs .unoJob #otherInfo {
+  min-width: 290px;
+  max-width: 388px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 15px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+#main #right #rightJobs .unoJob #otherInfo h1 {
+  width: 100%;
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  color: rgb(226, 232, 240);
+}
+#main #right #rightJobs .unoJob #otherInfo p {
+  margin: 0;
+  width: 100%;
+  color: rgb(148, 163, 184);
+  font-size: 14px;
+  line-height: 21px;
+}
+#main #right #rightJobs .unoJob #otherInfo #skills {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+#main #right #rightJobs .unoJob #otherInfo #skills #skill {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: rgb(94, 234, 212);
+  background-color: rgba(45, 212, 191, 0.1);
+  border-radius: 20px;
+  height: 20px;
+  font-size: 12px;
+  padding: 4px 12px;
+}
+#main #right #rightJobs .unoJob:hover {
+  background-color: rgba(90, 110, 120, 0.1);
+}
+#main #right #rightJobs .unoJob:hover #otherInfo h1 {
+  color: rgb(94, 234, 212);
+}
+#main #right #rightProjects {
+  scroll-margin-top: 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 25px;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+}
+#main #right #rightProjects #title {
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 25px;
+  letter-spacing: 0.1em;
+}
+#main #right #rightProjects #link {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: white;
+}
+#main #right #rightProjects #link a {
+  all: unset;
+  cursor: pointer;
+}
+#main #right #rightProjects .unoProject {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.2s;
+  width: 100%;
+  border-radius: 15px;
+  padding: 20px 0;
+  height: -moz-fit-content;
+  height: fit-content;
+  gap: 15px;
+}
+#main #right #rightProjects .unoProject #imgDiv {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  width: 100%;
+  max-width: 200px;
+  height: 100%;
+  transition: all 0.2s;
+  border-radius: 10px;
+}
+#main #right #rightProjects .unoProject #imgDiv img {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  max-width: 100%;
+  min-width: 88px;
+  max-height: 100%;
+  border: 1.6px solid;
+  border-color: rgba(226, 232, 240, 0.1);
+  margin: auto;
+  transition-duration: 0.15s;
+  transition-property: border-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+#main #right #rightProjects .unoProject #imgDiv object {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  max-width: 100%;
+  min-width: 88px;
+  max-height: 100%;
+  border: 1.6px solid;
+  border-color: rgba(226, 232, 240, 0.1);
+  margin: auto;
+  transition-duration: 0.15s;
+  transition-property: border-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+#main #right #rightProjects .unoProject #otherInfo {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 15px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+#main #right #rightProjects .unoProject #otherInfo h1 {
+  width: 100%;
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  color: rgb(226, 232, 240);
+}
+#main #right #rightProjects .unoProject #otherInfo p {
+  margin: 0;
+  width: 100%;
+  color: rgb(148, 163, 184);
+  font-size: 14px;
+  line-height: 21px;
+}
+#main #right #rightProjects .unoProject #otherInfo #skills {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+#main #right #rightProjects .unoProject #otherInfo #skills #skill {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: rgb(94, 234, 212);
+  background-color: rgba(45, 212, 191, 0.1);
+  border-radius: 20px;
+  height: 20px;
+  font-size: 12px;
+  padding: 4px 12px;
+}
+#main #right #rightProjects .unoProject:hover #imgDiv img {
+  border-color: rgba(226, 232, 240, 0.5);
+}
+#main #right #rightProjects .unoProject:hover #imgDiv object {
+  border-color: rgba(226, 232, 240, 0.5);
+}
+
+@media only screen and (min-width: 640px) {
+  /* For tablets: */
+  #main #left #leftTop #header h1 {
+    font-size: 48px;
+  }
+  #main #right #rightProjects {
+    gap: 60px;
+  }
+  #main #right #rightProjects .unoProject {
+    padding: 0px 0;
+    flex-direction: row;
+    gap: 35px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  #main #right #rightProjects .unoProject #imgDiv {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    max-width: 150px;
+    max-height: 86px;
+  }
+  #main #right #rightProjects .unoProject #imgDiv img {
+    width: 100%;
+  }
+  #main #right #rightProjects .unoProject #imgDiv object {
+    width: 100%;
+  }
+  #main #right #rightProjects .unoProject #otherInfo {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    width: 100%;
+    min-width: 430px;
+    max-width: 670px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* For tablets: */
+  #main {
+    padding: 96px 48px;
+    /* width: calc(100% - 96px); */
+    width: 100%;
+  }
+  #main #right #rightProjects .unoProject {
+    gap: 20px;
+  }
+  #main #right #rightProjects .unoProject #imgDiv {
+    max-width: 200px;
+    max-height: 114px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /* For desktop: */
+  #main {
+    font-family: Inter;
+    font-feature-settings: "ss03", "cv02", "cv11";
+    font-variation-settings: normal;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    background-color: rgb(15, 23, 42);
+    /* width: calc(100% - 192px); */
+    width: 100%;
+    height: 100%;
+    padding: 0 96px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    z-index: 1;
+  }
+  #main #left {
+    position: fixed;
+    top: 0;
+    left: 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    min-height: 382px;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: calc(100vh - 182px);
+    padding: 96px 0;
+    opacity: 1;
+  }
+  #main #left #leftTop {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+  }
+  #main #left #leftTop #header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+  #main #left #leftTop #header h1 {
+    all: unset;
+    font-size: 48px;
+    color: rgb(226, 232, 240);
+    font-weight: bold;
+    letter-spacing: -0.025em;
+    cursor: pointer;
+  }
+  #main #left #leftTop #header h2 {
+    all: unset;
+    margin-top: 10px;
+    font-weight: bold;
+    letter-spacing: -0.025em;
+    font-size: 20px;
+    color: rgb(226, 232, 240);
+  }
+  #main #left #leftTop #header h3 {
+    all: unset;
+    margin-top: 15px;
+    width: 320px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgb(148, 163, 184);
+  }
+  #main #left #leftTop #mapLinks {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+  }
+  #main #left #leftTop #mapLinks #linkDiv a {
+    all: unset;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  #main #left #leftTop #mapLinks #linkDiv a #line {
+    transition: all 0.3s;
+    background-color: rgb(148, 163, 184);
+    height: 1px;
+    width: 40px;
+  }
+  #main #left #leftTop #mapLinks #linkDiv a p {
+    transition: all 0.3s;
+    font-weight: bold;
+    color: rgb(148, 163, 184);
+    letter-spacing: 1.2px;
+    font-size: 12px;
+  }
+  #main #left #leftTop #mapLinks #linkDiv:hover #line {
+    background-color: white;
+    width: 80px;
+  }
+  #main #left #leftTop #mapLinks #linkDiv:hover p {
+    color: white;
+  }
+  #main #left #leftBottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 32px;
+  }
+  #main #left #leftBottom a {
+    transition: all 0.3s;
+    opacity: 0.5;
+  }
+  #main #left #leftBottom a:hover {
+    opacity: 1;
+  }
+  #main #left2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    min-width: 392px;
+    max-width: 528px;
+    min-height: 382px;
+    height: calc(100vh - 182px);
+    padding: 96px 0;
+    opacity: 0;
+  }
+  #main #left2 #leftTop {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+  }
+  #main #left2 #leftTop #header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+  #main #left2 #leftTop #header h1 {
+    all: unset;
+    font-size: 48px;
+    color: rgb(226, 232, 240);
+    font-weight: bold;
+    letter-spacing: -0.025em;
+    cursor: pointer;
+  }
+  #main #left2 #leftTop #header h2 {
+    all: unset;
+    margin-top: 10px;
+    font-weight: bold;
+    letter-spacing: -0.025em;
+    font-size: 20px;
+    color: rgb(226, 232, 240);
+  }
+  #main #left2 #leftTop #header h3 {
+    all: unset;
+    margin-top: 15px;
+    width: 320px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgb(148, 163, 184);
+  }
+  #main #left2 #leftTop #mapLinks {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+  }
+  #main #left2 #leftTop #mapLinks #linkDiv a {
+    all: unset;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  #main #left2 #leftTop #mapLinks #linkDiv a #line {
+    transition: all 0.3s;
+    background-color: rgb(148, 163, 184);
+    height: 1px;
+    width: 40px;
+  }
+  #main #left2 #leftTop #mapLinks #linkDiv a p {
+    transition: all 0.3s;
+    font-weight: bold;
+    color: rgb(148, 163, 184);
+    letter-spacing: 1.2px;
+    font-size: 12px;
+  }
+  #main #left2 #leftTop #mapLinks #linkDiv:hover #line {
+    background-color: white;
+    width: 80px;
+  }
+  #main #left2 #leftTop #mapLinks #linkDiv:hover p {
+    color: white;
+  }
+  #main #left2 #leftBottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 32px;
+  }
+  #main #left2 #leftBottom a {
+    transition: all 0.3s;
+    opacity: 0.5;
+  }
+  #main #left2 #leftBottom a:hover {
+    opacity: 1;
+  }
+  #main #right {
+    width: 100%;
+    min-width: 440px;
+    max-width: 576px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 100px;
+    height: 100%;
+    color: rgb(148, 163, 184);
+    padding: 96px 0;
+  }
+  #main #right #rightAbout {
+    scroll-margin-top: 96px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: calc(100% - 30px);
+    padding: 0px 15px;
+  }
+  #main #right #rightAbout #title {
+    display: none;
+  }
+  #main #right #rightAbout p {
+    margin: 0;
+    width: 100%;
+    word-wrap: break-word;
+    font-weight: 500;
+    line-height: 26px;
+    font-size: 16px;
+  }
+  #main #right #rightJobs {
+    scroll-margin-top: 96px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+  }
+  #main #right #rightJobs .unoJob {
+    z-index: 1;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: calc(100% - 30px);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    padding: 10px 15px;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  #main #right #rightJobs .unoJob #time {
+    min-width: 86px;
+    max-width: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    color: gray;
+    height: 100%;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  #main #right #rightJobs .unoJob #otherInfo {
+    min-width: 290px;
+    max-width: 388px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 15px;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  #main #right #rightJobs .unoJob #otherInfo h1 {
+    width: 100%;
+    margin: 0;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(226, 232, 240);
+  }
+  #main #right #rightJobs .unoJob #otherInfo p {
+    margin: 0;
+    width: 100%;
+    color: rgb(148, 163, 184);
+    font-size: 14px;
+    line-height: 21px;
+  }
+  #main #right #rightJobs .unoJob #otherInfo #skills {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  #main #right #rightJobs .unoJob #otherInfo #skills #skill {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: rgb(94, 234, 212);
+    background-color: rgba(45, 212, 191, 0.1);
+    border-radius: 20px;
+    height: 20px;
+    font-size: 12px;
+    padding: 4px 12px;
+  }
+  #main #right #rightJobs .unoJob:hover {
+    background-color: rgba(90, 110, 120, 0.1);
+  }
+  #main #right #rightJobs .unoJob:hover #otherInfo h1 {
+    color: rgb(94, 234, 212);
+  }
+  #main #right #rightProjects {
+    scroll-margin-top: 96px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 15px;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+  }
+  #main #right #rightProjects #title {
+    display: none;
+  }
+  #main #right #rightProjects .unoProject {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.2s;
+    width: calc(100% - 30px);
+    border-radius: 15px;
+    padding: 20px 15px;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  #main #right #rightProjects .unoProject #imgDiv {
+    max-width: none;
+    max-height: none;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    transition: all 0.2s;
+    border-radius: 10px;
+  }
+  #main #right #rightProjects .unoProject #imgDiv img {
+    display: block;
+    max-width: none;
+    max-height: none;
+    width: calc(100% - 3.2px);
+    border-radius: 4px;
+    border: 1.6px solid;
+    border-color: rgba(226, 232, 240, 0.1);
+    margin: auto;
+    transition-duration: 0.15s;
+    transition-property: border-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  #main #right #rightProjects .unoProject #imgDiv object {
+    display: block;
+    max-width: none;
+    max-height: none;
+    width: calc(100% - 3.2px);
+    border-radius: 4px;
+    border: 1.6px solid;
+    border-color: rgba(226, 232, 240, 0.1);
+    margin: auto;
+    transition-duration: 0.15s;
+    transition-property: border-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  #main #right #rightProjects .unoProject #otherInfo {
+    all: unset;
+    grid-column-start: 3;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 15px;
+  }
+  #main #right #rightProjects .unoProject #otherInfo h1 {
+    width: 100%;
+    margin: 0;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(226, 232, 240);
+  }
+  #main #right #rightProjects .unoProject #otherInfo p {
+    margin: 0;
+    width: 100%;
+    color: rgb(148, 163, 184);
+    font-size: 14px;
+    line-height: 21px;
+  }
+  #main #right #rightProjects .unoProject #otherInfo #skills {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  #main #right #rightProjects .unoProject #otherInfo #skills #skill {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: rgb(94, 234, 212);
+    background-color: rgba(45, 212, 191, 0.1);
+    border-radius: 20px;
+    height: 20px;
+    font-size: 12px;
+    padding: 4px 12px;
+  }
+  #main #right #rightProjects .unoProject:hover {
+    background-color: rgba(90, 110, 120, 0.1);
+    box-shadow: 0 0 5px rgb(0, 0, 0);
+  }
+  #main #right #rightProjects .unoProject:hover #imgDiv img {
+    border-color: rgba(226, 232, 240, 0.5);
+  }
+  #main #right #rightProjects .unoProject:hover #imgDiv object {
+    border-color: rgba(226, 232, 240, 0.5);
+  }
+  #main #right #rightProjects .unoProject:hover #otherInfo h1 {
+    color: rgb(94, 234, 212);
+  }
+  #main #right #rightProjects:has(.unoProject:hover) .unoProject:not(:hover) {
+    opacity: 0.5;
+  }
+  #gradMain:before {
+    content: "";
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(rgba(29, 78, 216, 0.15), transparent 80%);
+    transform: translate(0, 0);
+    transition-duration: 0.3s;
+    transition-property: color, background-color, border-color,
+      text-decoration-color, fill, stroke, opacity, box-shadow, transform,
+      filter, backdrop-filter, -webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    z-index: 2;
+  }
+}
+@media only screen and (min-width: 1159px) {
+  #main #left {
+    left: calc((100% - 1160px) / 2 + 96px);
+  }
+} /*# sourceMappingURL=App.css.map */
