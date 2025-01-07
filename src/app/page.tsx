@@ -1,7 +1,6 @@
 "use client"
-import Image from "next/image"
 import { useState } from "react"
-
+import Image from "next/image"
 export type Jobs = {
   classname: string
   index: number
@@ -104,17 +103,17 @@ export default function App() {
   let listenerExist = false
   async function updateMousePosition(ev: MouseEvent) {
     listenerExist = true
-    let target = document.getElementById("gradMain") as HTMLDivElement
-    let rect = target.getBoundingClientRect()
+    const target = document.getElementById("gradMain") as HTMLDivElement
+    // const rect = target.getBoundingClientRect()
     // let x = Number(ev.clientX) - Number(rect.left)
     // let y = Number(ev.clientY) - Number(rect.top)
     // let win = window.scrollY
     // console.log(win)
     // let tar = target.offsetTop
     // console.log(tar)
-    let x = Number(ev.clientX) - 400
+    const x = Number(ev.clientX) - 400
     if (typeof window !== "undefined") {
-      let y = Number(ev.clientY) - 400 + window.scrollY
+      const y = Number(ev.clientY) - 400 + window.scrollY
       target.style.setProperty("--x", x + "px")
       target.style.setProperty("--y", y + "px")
     }
@@ -217,13 +216,15 @@ export default function App() {
           </div>
           <div id="leftBottom">
             <a href="https://github.com/Chingis007">
-              <img
+              <Image
+                alt="github"
                 src="/github.svg"
                 style={{ width: "25px", height: "25px" }}
               />
             </a>
             <a href="https://www.linkedin.com/in/kyrylo-karaulnyi-589950278/">
-              <img
+              <Image
+                alt="linkedin"
                 src="/linkedin.svg"
                 style={{ width: "25px", height: "25px" }}
               />
@@ -308,13 +309,15 @@ export default function App() {
           </div>
           <div id="leftBottom">
             <a href="https://github.com/Chingis007">
-              <img
+              <Image
+                alt="github"
                 src="/github.svg"
                 style={{ width: "25px", height: "25px" }}
               />
             </a>
             <a href="https://www.linkedin.com/in/kyrylo-karaulnyi-589950278/">
-              <img
+              <Image
+                alt="linkedin"
                 src="/linkedin.svg"
                 style={{ width: "25px", height: "25px" }}
               />
@@ -326,10 +329,10 @@ export default function App() {
           <div id="rightAbout">
             <div id="title">ABOUT</div>
             <p>
-              Hello! I'm a passionate and dedicated Full Stack Developer with a
-              strong expertise in modern web technologies. With a robust skill
-              set that includes JavaScript, Node.js, Next, Docker, React, Git,
-              Vite, Vercel, AWS and more, I am committed to creating
+              Hello! I&apos;m a passionate and dedicated Full Stack Developer
+              with a strong expertise in modern web technologies. With a robust
+              skill set that includes JavaScript, Node.js, Next, Docker, React,
+              Git, Vite, Vercel, AWS and more, I am committed to creating
               high-quality, scalable, and efficient web applications.
             </p>
             <p>
@@ -455,7 +458,7 @@ export default function App() {
                       </div>
                     )} */}
                     <div id="imgDiv">
-                      <img src={oneProject.img} alt="" />
+                      <Image src={oneProject.img} alt="" />
                     </div>
                     <div id="otherInfo">
                       <h1>{oneProject.h1}</h1>
