@@ -89,6 +89,7 @@ html {
   justify-content: start;
   align-items: start;
   width: 100%;
+  gap: 20px;
 }
 #main #left #leftTop #mapLinks #linkDiv a {
   all: unset;
@@ -184,6 +185,7 @@ html {
   justify-content: start;
   align-items: start;
   width: 100%;
+  gap: 20px;
 }
 #main #left2 #leftTop #mapLinks #linkDiv {
   display: flex;
@@ -642,6 +644,7 @@ html {
     justify-content: start;
     align-items: start;
     width: 100%;
+    gap: 20px;
   }
   #main #left #leftTop #mapLinks #linkDiv a {
     all: unset;
@@ -745,6 +748,7 @@ html {
     justify-content: start;
     align-items: start;
     width: 100%;
+    gap: 20px;
   }
   #main #left2 #leftTop #mapLinks #linkDiv a {
     all: unset;
@@ -1050,6 +1054,7 @@ html {
     top: var(--y);
     width: 800px;
     height: 800px;
+    border-radius: 50%;
     background: radial-gradient(rgba(29, 78, 216, 0.15), transparent 80%);
     transform: translate(0, 0);
     transition-duration: 0.3s;

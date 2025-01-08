@@ -50,7 +50,7 @@ export default function App() {
     {
       classname: "unoProject",
       // useHtml: true,
-      img: "./repshop.png",
+      img: "/repshop.png",
       h1: "Repair Shop",
       p: "I developed a website for a repair shop designed to streamline operations and enhance user experience. The platform allows authorized users to manage customers and service tickets efficiently, with features like ticket tracking, editing, filtering, and searching. Built with Next.js and deployed on Vercel, the website benefits from fast performance, server-side rendering, and scalability. The design is responsive, ensuring seamless functionality across devices, while the development process emphasized clean code, reusable components, and adherence to best practices. The result is a reliable, user-friendly tool that meets the repair shop's needs and provides a strong foundation for future growth and improvements.",
       link: "https://next-repair-shop-pr.vercel.app/",
@@ -70,7 +70,7 @@ export default function App() {
     },
     {
       classname: "unoProject",
-      img: "./messanger.png",
+      img: "/messanger.png",
       h1: "Messanger App",
       p: "I have successfully developed a feature-rich messenger application, highlighting my skills in modern web development. The front-end is designed using React and TypeScript, offering a responsive and intuitive user interface. The back-end is built with a Node.js application, leveraging MongoDB for real-time data storage and retrieval.The entire application is deployed on cloud platforms such as Render and Vercel, ensuring optimal performance and scalability. This project showcases my ability to create seamless, real-time communication solutions, integrating front-end and back-end technologies, and efficiently deploying applications in a cloud environment.",
       link: "https://silentalk.vercel.app/",
@@ -85,7 +85,7 @@ export default function App() {
     },
     {
       classname: "unoProject",
-      img: "./commerce.png",
+      img: "/commerce.png",
       h1: "E-Commerce Clothing Website",
       p: "I have developed a dynamic and fully-functional e-commerce clothing website that showcases my expertise in full-stack web development. The front-end of the website is crafted using React and TypeScript, ensuring a seamless and interactive user experience. On the back-end, I utilized a Dockerized Node.js application with MongoDB for efficient data management and scalability.The entire application is deployed and running on cloud platforms, including AWS, Render, and Vercel, ensuring high availability and performance. This project demonstrates my proficiency in modern web technologies, cloud deployment, and containerization, delivering a robust and user-friendly online shopping experience.",
       link: "https://verona-front.vercel.app/",
@@ -114,8 +114,8 @@ export default function App() {
     const x = Number(ev.clientX) - 400
     if (typeof window !== "undefined") {
       const y = Number(ev.clientY) - 400 + window.scrollY
-      target.style.setProperty("--x", x + "px")
-      target.style.setProperty("--y", y + "px")
+      target!.style.setProperty("--x", x + "px")
+      target!.style.setProperty("--y", y + "px")
     }
   }
   if (!listenerExist) {
@@ -217,13 +217,17 @@ export default function App() {
           <div id="leftBottom">
             <a href="https://github.com/Chingis007">
               <Image
+                width={25}
+                height={25}
                 alt="github"
                 src="/github.svg"
-                style={{ width: "25px", height: "25px" }}
+                style={{ backgroundColor: "white", borderRadius: "4px" }}
               />
             </a>
             <a href="https://www.linkedin.com/in/kyrylo-karaulnyi-589950278/">
               <Image
+                width={25}
+                height={25}
                 alt="linkedin"
                 src="/linkedin.svg"
                 style={{ width: "25px", height: "25px" }}
@@ -310,6 +314,8 @@ export default function App() {
           <div id="leftBottom">
             <a href="https://github.com/Chingis007">
               <Image
+                width={25}
+                height={25}
                 alt="github"
                 src="/github.svg"
                 style={{ width: "25px", height: "25px" }}
@@ -317,6 +323,8 @@ export default function App() {
             </a>
             <a href="https://www.linkedin.com/in/kyrylo-karaulnyi-589950278/">
               <Image
+                width={25}
+                height={25}
                 alt="linkedin"
                 src="/linkedin.svg"
                 style={{ width: "25px", height: "25px" }}
@@ -458,7 +466,13 @@ export default function App() {
                       </div>
                     )} */}
                     <div id="imgDiv">
-                      <Image src={oneProject.img} alt="" />
+                      <Image
+                        width={25}
+                        height={25}
+                        src={oneProject.img}
+                        alt=""
+                        unoptimized={true}
+                      />
                     </div>
                     <div id="otherInfo">
                       <h1>{oneProject.h1}</h1>
